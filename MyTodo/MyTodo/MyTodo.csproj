@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>False</UseWindowsForms>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Images\user.png" />
+    <None Remove="Images\wind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\user.png" />
+    <Resource Include="Images\wind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="4.11.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.5.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
+    <PackageReference Include="RestSharp" Version="107.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MyTodo.SharedLib\MyTodo.SharedLib.csproj" />
+    <ProjectReference Include="..\MyTodo.Core\MyTodo.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\Dialog\" />
+    <Folder Include="Views\Dialog\" />
+  </ItemGroup>
+</Project>
